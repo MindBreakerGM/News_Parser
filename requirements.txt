@@ -1,4 +1,4 @@
 pytz
 lxml
-dotenv
+python-dotenv
 requests
