@@ -39,7 +39,9 @@ if __name__ == '__main__':
     while True:
         moscow_time = datetime.now(pytz.timezone('Europe/Moscow'))
         parser_class = Parser()
-        if str(moscow_time.hour) + ":" + str(moscow_time.minute) == parser_class.time_sending:
+        if int(moscow_time.minute) < 10:
+            minute = f'0{moscow_time.minute}'
+        if str(moscow_time.hour) + ":" + minute == parser_class.time_sending:
             bot_class = Bot()
             data = parser_class.get_news()
             bot_class.send_news(data)
