@@ -39,6 +39,7 @@ if __name__ == '__main__':
     while True:
         moscow_time = datetime.now(pytz.timezone('Europe/Moscow'))
         parser_class = Parser()
+        minute = moscow_time.minute
         if int(moscow_time.minute) < 10:
             minute = f'0{moscow_time.minute}'
         if str(moscow_time.hour) + ":" + minute == parser_class.time_sending:
