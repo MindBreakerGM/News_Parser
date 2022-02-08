@@ -42,7 +42,7 @@ if __name__ == '__main__':
         minute = moscow_time.minute
         if int(moscow_time.minute) < 10:
             minute = f'0{moscow_time.minute}'
-        if str(moscow_time.hour) + ":" + minute == parser_class.time_sending:
+        if str(moscow_time.hour) + ":" + str(minute) == parser_class.time_sending:
             bot_class = Bot()
             data = parser_class.get_news()
             bot_class.send_news(data)
