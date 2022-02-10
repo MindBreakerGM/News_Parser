@@ -1,3 +1,4 @@
+import time
 import pytz
 import requests
 from config import *
@@ -46,3 +47,4 @@ if __name__ == '__main__':
             bot_class = Bot()
             data = parser_class.get_news()
             bot_class.send_news(data)
+            time.sleep(120)
