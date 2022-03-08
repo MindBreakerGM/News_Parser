@@ -11,7 +11,7 @@ class Parser:
         self.politic_url = "https://www.m24.ru/rubrics/politics"
         self.city_url = "https://www.m24.ru/rubrics/city"
         self.society_url = "https://www.m24.ru/rubrics/society"
-    def get_news(self) -> None:
+    def get_news(self) -> str:
         def get_data(self, category: str) -> str:
             data_dict = {
                 'politic':html.fromstring(requests.get(self.politic_url).content),
